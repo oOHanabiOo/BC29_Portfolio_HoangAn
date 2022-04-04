@@ -1,0 +1,281 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+h1 {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+}
+/* ===ANIMATION=== */
+@keyframes lumber{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* ===HEADER=== */
+header {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.navbar-brand i {
+    color: green;
+    font-size: 2.5rem;
+}
+.navbar-brand span {
+    font-size: 2rem;
+}
+.navbar-nav .nav-item {
+    margin: 0 10px;
+}
+.navbar-nav .nav-item::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: green;
+    transition: all .5s;
+}
+.navbar-nav .nav-item.active::after {
+    width: 100%;
+}
+.navbar-nav .nav-item:hover::after {
+    width: 100%;
+}
+.navbar-nav .nav-item:hover .nav-link {
+    color: green;
+}
+.navbar-nav .nav-item.active a {
+    color: green !important;
+}
+.navbar-nav .nav-item .nav-link {
+    color: white;
+}
+
+/* ===CAROUSEL=== */
+#demo .carousel-indicators li {
+    width:15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.carousel-item {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.carousel-item:nth-child(1) {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../imgs/finland.jpg);
+}
+.carousel-item:nth-child(2) {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../imgs/mountains.jpg);
+}
+.carousel-item:nth-child(3) {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../imgs/mountains-1.jpg);
+}
+.img__thumb {
+    width: 150px;
+    margin: auto;
+    margin-top: 250px;
+    animation-name: lumber;
+    animation-duration: 1s;
+}
+.carousel-caption {
+    margin-bottom: 180px;
+}
+.carousel-caption h3 {
+    font-size: 4rem;
+    animation-name: lumber;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+.carousel-caption p {
+    font-size: 1.5rem;
+    animation-name: lumber;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+.carousel-indicators {
+    margin-bottom: 50px;
+}
+
+/* ===PROJECT=== */
+#project {
+    margin-top: 100px;
+}
+.project__title {
+    padding: 0 200px;
+}
+.project__title h1 {
+    margin-bottom: 20px;
+}
+.project__content ul {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+.project__content li {
+    margin: 0 5px;
+}
+.card {
+    border-radius: 20px;
+}
+.card img {
+    border-radius: 20px 20px 0 0;
+}
+.card-body {
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    border: transparent;
+    transition: all .5s;
+}
+.card-body h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: all .3s;
+}
+.card-body p {
+    color: grey;
+    padding-bottom: 20px;
+}
+.tab-content .col-4 {
+    margin-bottom: 32px;
+    cursor: pointer;
+}
+.tab-content .col-4:hover .card-body {
+    border: 1px solid green;
+    border-top: none;
+}
+.tab-content .col-4:hover h4 {
+    color: green;
+}
+
+/* ===HIRE=== */
+#hire {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../imgs/3.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 700px;
+    background-attachment: fixed;
+}
+.hire__title {
+    padding: 0 200px;
+    padding-top: 100px;
+}
+.hire__title h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+.hire__title p {
+    margin-bottom: 70px;
+}
+.hire__item {
+    background-color: rgba(255, 255, 255, 0.226);
+    padding: 50px 35px;
+    text-align: center;
+    transition: all .5s;
+}
+.hire__item:hover {
+    background-color: black;
+    border: 1px solid white;
+}
+.hire__item i {
+    font-size: 3rem;
+    color: green;
+    margin-bottom: 20px;
+}.hire__text h4 {
+    margin-bottom: 20px;
+}
+
+/* ===OUR=== */
+.our {
+    display: flex;
+}
+.our__mm {
+    width: 42%;
+    padding: 80px 0;
+    background-image: url(../imgs/memphis_3.png);
+    background-size: cover;
+    background-position: center;
+}
+.our__title {
+    margin-left: 200px;
+    padding: 40px 30px;
+    box-shadow: 0 0 20px rgb(141, 137, 137);
+    border-radius: 10px;
+}
+.our__content {
+    width: 58%;
+    margin-top: 100px;
+    padding-right: 200px;
+    padding-left: 30px;
+}
+.our__content ul {
+    display: flex;
+}
+.our__content img {
+    width: 100%;
+}
+
+/* ===FOOTER=== */
+footer {
+    background: #222222;
+    padding-bottom: 50px;
+}
+.footer {
+    text-align: center;
+}
+.footer__icon {
+    padding: 50px 0 10px 0;
+    border-bottom:1px solid #949494;
+}
+.footer__icon ul {
+    display: flex;
+    justify-content: center;
+}
+.footer__icon ul li {
+    margin: 0 5px;
+}
+.footer__icon ul li a i:hover {
+    color: green;
+    border: 1px solid green;
+}
+.footer__icon ul li a {
+    color: #aaaaaa;
+    text-align: center;
+}
+.footer__icon ul li a i {
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    border-radius: 50%;
+    border: 1px solid #949494;
+    transition: all .5s;
+}
+.footer__text {
+    color: #aaaaaa;
+    margin-top: 30px;
+}
+.footer__text .hana {
+    color: #aaaaaa;
+    text-decoration: none;
+    transition: all .5s;
+}
+.footer__text .hana:hover {
+    color: green;
+}
